@@ -1,0 +1,8 @@
+.gmap{
+	position: absolute;
+	top: 120px;
+	bottom: 30px;
+	right: 0px;
+	left: 180px;
+	border-right: 9px solid #f86215;
+}

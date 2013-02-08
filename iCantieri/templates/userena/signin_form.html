@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Signin" %}{% endblock %}
+
+
+{% block extra_js %}
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" media="all">
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+<script>
+	$(function() {
+		$('input[type=text]').attr('class', 'text input-size');
+		$('input[type=text]').css('width', ' 97%');
+
+		$('input[type=password]').attr('class', 'text input-size');
+		$('input[type=password]').css('width', ' 97%');
+
+		$('.errorlist').attr('class', 'ui-state-error ui-corner-all');
+	})
+</script>
+{%endblock%}
+{% block extra_css %}
+<style>
+.ui-state-error {
+	padding: .3em;
+	width: 97%;
+}
+</style>
+{%endblock%}
+{% block content %}
+
+<div class="full-width title-page">
+	<!-- Full Width -->
+	<div class="container">
+		<!-- Container -->
+		
+	</div>
+	<!-- End Container -->
+</div>
+<!-- End Full Width -->
+
+<div class="full-width box-container">
+	<!-- Full Width -->
+	<div class="container">
+		<!-- Container -->
+		<form action="" method="post">
+			{% csrf_token %}
+
+			<div id="container" class="clearfix">
+				<!-- Container Clearfix -->
+				{{ form.non_field_errors }}
+
+				<div class="box col2">
+					<div style="padding: 20px; padding-bottom: 5px" class="bg-div">
+						{% for field in form %} {{ field.errors }} 
+						{% if field.name == 'remember_me' %}
+						<div class="element">
+							<label for="id_{{ field.name }}">{{ field }}
+								{{field.label}}</label>
+						</div>
+						{% else %} {{ field.label_tag }} {{ field }} {% endif %} {% endfor%}
+						
+						<br/>
+						
+						<input class="button black" type="submit" value="{% trans " Signin" %}"/>
+						<a href='{% url userena_password_reset %}' class="button black"
+							title="{% trans "Forgot your password?" %}">{% trans "Forgot your password?"%}</a>
+								
+					</div>
+				</div>
+		
+				
+
+				
+			</div>
+			{% if next %}<input type="hidden" name="next" value="{{ next }}" />{%endif%}
+		</form>
+
+	</div>
+	<!-- End Container -->
+</div>
+<!-- End Full Width -->
+{% endblock %}

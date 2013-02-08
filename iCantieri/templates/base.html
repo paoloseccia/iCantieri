@@ -1,0 +1,100 @@
+{% load i18n %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+
+<!-- Basic Page Needs
+  ================================================== -->
+<meta charset="utf-8">
+<title>{% block title %}iCantieri{% endblock %}</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+  ================================================== -->
+
+<link rel="stylesheet" href="{{ STATIC_URL }}icantieri/css/style.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}icantieri/css/style.css">
+
+
+<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<!-- Favicons
+	================================================== -->
+<link rel="shortcut icon" href="{{ STATIC_URL }}icantieri/img/favicon.ico">
+<link rel="apple-touch-icon" href="{{ STATIC_URL }}icantieri/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_URL }}icantieri/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_URL }}icantieri/img/apple-touch-icon-114x114.png">
+
+{% block extra_css %}{%endblock%}
+
+</head>
+
+
+<body id="page_effect">
+
+	<div class="full-width" id="header" >
+		<!-- Header -->
+
+		<div class="container">
+			<!-- Container -->
+
+			<!-- Logo --> 
+			<img class="logo align-right" src="{{ STATIC_URL }}icantieri/img/logo.png" 
+					alt="logo"/>
+			<!-- End Logo -->
+			
+		</div>
+		<!-- End Container -->
+
+
+	</div>
+	<!-- End Header -->
+	
+	{% block content %}{% endblock%}	
+	
+
+
+	<!-- JS
+	================================================== -->	
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/tabs.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/main.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.flexslider-min.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/masonry.min.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.countdown.min.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/hoverIntent.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/superfish.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.tipsy.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/supersubs.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.ui.totop.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.easing.1.3.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.fancybox-1.3.4.pack.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.tinyscrollbar.min.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.hoverdir.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jPages.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/jquery.fitvids.js"></script>
+	<script src="http://twitter.com/javascripts/blogger.js"></script>
+	<script src="{{ STATIC_URL }}icantieri/javascripts/mediaelement-and-player.min.js"></script>
+
+	{% block extra_js %}{%endblock%}
+
+
+	<!-- End Document
+================================================== -->
+
+</body>
+</html>

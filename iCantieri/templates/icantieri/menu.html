@@ -1,0 +1,24 @@
+<nav class="twelve columns align-right" id="menu">
+	<!-- Menu Navigation -->
+	<ul class="sf-menu sf-js-enabled">
+		<li><a href="#">Report</a></li>
+		<li><a href="#">Assistenza</a></li>
+	
+
+		<li><a href="#">Archivi</a>
+			<ul style="display: none; visibility: hidden;" class="sf-js-enabled">
+				<li><a href="#">Fornitori</a></li>
+				<li><a href="#">Articoli</a></li>
+			</ul>
+		</li>
+		<li><a href="{% url userena_signout %}">Logout</a></li>
+	</ul>
+	
+	<select><option selected="selected" value="">Go to...</option>
+		<option value="#">Report</option>
+		<option value="#">Assistenza</option>
+		<option value="#">Fornitori</option>
+		<option value="#">Articoli</option>
+		<option value="#">Logout</option>
+	</select>
+</nav>
